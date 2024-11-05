@@ -1,8 +1,8 @@
 name: Daily Update
 
 on:
-  schedule:
-    - cron: '50 23 * * *'
+  #schedule:
+    #- cron: '50 23 * * *'
   workflow_dispatch:
     branches:
       - main
