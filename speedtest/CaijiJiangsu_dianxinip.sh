@@ -13,7 +13,7 @@ i=0
 
 if [ $# -eq 0 ]; then
   echo "请选择城市："
-  echo "1. 四川（Sichuan_dianxin）"
+  echo "1. 江苏（Jiangsu_dianxin）"
   echo "0. 全部"
   read -t 10 -p "输入选择或在10秒内无输入将默认选择全部: " city_choice
 
@@ -29,12 +29,12 @@ fi
 # 根据用户选择设置城市和相应的stream
 case $city_choice in
     1)
-        city="Sichuan_dianxin"
-        stream="rtp/239.93.42.42:5140"
-        channel_key="四川"
-#        url_fofa=$(echo  '"udpxy" && country="CN" && city="Chengdu" && org="Chinanet" && protocol="http"' | base64 |tr -d '\n')
+        city="Jiangsu_dianxin"
+        stream="rtp/239.49.8.118:8000"
+        channel_key="江苏"
+#        url_fofa=$(echo  '"udpxy" && country="CN" && region="Jiangsu" && org="Chinanet" && protocol="http"' | base64 |tr -d '\n')
 #        url_fofa="https://fofa.info/result?qbase64="$url_fofa
-        url_fofa="https://raw.githubusercontent.com/zjykfy/ceshi/refs/heads/main/Sichuan_dianxin.txt"$url_fofa
+        url_fofa="https://raw.githubusercontent.com/zjykfy/yangfeiyue/refs/heads/main/speedtest/ip/Jiangsu_dianxin.onlygood.ip"$url_fofa
         ;;
     0)
         # 如果选择是“全部选项”，则逐个处理每个选项
@@ -122,8 +122,8 @@ rm -rf tmp1.txt tmp2.txt
 
 #--------------------合并所有城市的txt文件为:   zubo.txt-----------------------------------------
 
-echo "四川,#genre#" >zubo.txt
-cat txt/Sichuan_dianxin.txt >>zubo.txt
+echo "江苏,#genre#" >zubo.txt
+cat txt/Jiangsu_dianxin.txt >>zubo.txt
 
 
 for a in result/*.txt; do echo "";echo "========================= $(basename "$a") ==================================="; cat $a; done
