@@ -22,7 +22,7 @@ jobs:
       #working-directory: iptv/speedtest
       run: |
         cd $GITHUB_WORKSPACE/speedtest
-        bash ./CaijiJiangsu_dianxinip.sh
+        bash ./CaijiJiangsuip.sh
     - name: Update Results
       run: |
         cd $GITHUB_WORKSPACE/speedtest
