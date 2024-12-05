@@ -19,9 +19,7 @@ jobs:
           echo "$USERNAME"
           echo "$PASSWORD"
           # 在这里添加你的自动登录脚本或命令
-          
-  run-script:
-    runs-on: ubuntu-latest
+
 
     steps:
     - name: Checkout Repository
