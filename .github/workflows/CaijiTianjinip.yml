@@ -8,8 +8,8 @@ jobs:
   auto-login:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
+    - name: Checkout Repository
+      uses: actions/checkout@v2
  
       - name: Auto Login to Service
         env:
@@ -19,10 +19,6 @@ jobs:
           echo "$USERNAME"
           echo "$PASSWORD"
           # 在这里添加你的自动登录脚本或命令
-
-
-    - name: Checkout Repository
-      uses: actions/checkout@v2
       
     - name: Install Dependencies
       run: |
