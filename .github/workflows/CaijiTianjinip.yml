@@ -21,10 +21,6 @@ jobs:
           # 在这里添加你的自动登录脚本或命令
 
 
-    steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-      
     - name: Install Dependencies
       run: |
         sudo apt-get update
