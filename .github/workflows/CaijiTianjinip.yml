@@ -5,7 +5,7 @@ on:
     branches: [ main ]
  
 jobs:
-  run-script:
+  auto-login:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
