@@ -1,4 +1,4 @@
-name: CaijiTianjinip
+name: Auto Login
 
 on:
   push:
