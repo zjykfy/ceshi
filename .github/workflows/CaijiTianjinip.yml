@@ -20,6 +20,12 @@ jobs:
           echo "$PASSWORD"
           # 在这里添加你的自动登录脚本或命令
 
+
+on:
+  #schedule:
+    #- cron: "30 23 * * *"
+  workflow_dispatch:
+
 jobs:
   run-script:
     runs-on: ubuntu-latest
