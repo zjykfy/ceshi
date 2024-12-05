@@ -1,9 +1,18 @@
 name: CaijiGuangdongip
 
 on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
   #schedule:
     #- cron: "01 */1 * * *"
   workflow_dispatch:
+
+env:
+  ALIYUN_REGISTRY: "${{ secrets.ALIYUN_REGISTRY }}"
+  ALIYUN_NAME_SPACE: "${{ secrets.ALIYUN_NAME_SPACE }}"
+  ALIYUN_REGISTRY_USER: "${{ secrets.ALIYUN_REGISTRY_USER }}"
+  GITHUB_REGISTRY_PASSWORD: "${{ secrets.GITHUB_REGISTRY_PASSWORD }}"
 
 jobs:
   run-script:
