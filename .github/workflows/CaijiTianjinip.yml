@@ -13,12 +13,6 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-  auto-login:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
- 
       - name: Auto Login to Service
         env:
           USERNAME: ${{ secrets.USERNAME }}
