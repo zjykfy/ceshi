@@ -1,0 +1,11 @@
+name: Auto Login Example
+on: [push]
+ 
+jobs:
+  login:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Login to Service
+      run: |
+        MY_SERVICE_TOKEN=$(echo "${{ PASSWORD }}" | awk '{print $1}')
+        USERNAME --token $MY_SERVICE_TOKEN
